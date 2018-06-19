@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
+import { Button, Icon } from 'react-native-elements'
+
+import AvatarList from './AvatarList'
+
 export default class Root extends Component {
   render() {
     return (
@@ -8,9 +12,22 @@ export default class Root extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!!!!!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
+        <Button
+          title="LOADING BUTTON"
+          loading
+          loadingProps={{ size: "large", color: "rgba(111, 202, 186, 1)" }}
+          titleStyle={{ fontWeight: "700" }}
+          buttonStyle={{
+            backgroundColor: "rgba(92, 99,216, 1)",
+            width: 300,
+            height: 45,
+            borderColor: "transparent",
+            borderWidth: 0,
+            borderRadius: 5
+          }}
+          containerStyle={{ marginTop: 20 }}
+        />
+        <AvatarList/>
       </View>
     )
   }
@@ -20,7 +37,7 @@ const styles = {
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
